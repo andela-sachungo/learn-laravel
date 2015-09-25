@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Laravel</title>
+        <meta charset = "UTF-8">
+        <title>Welcome to TODOParrot</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -38,7 +39,23 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+               <!-- <div class="title">Laravel 5</div> -->
+               <h1>Welcome to TODOParrot</h1>
+               <ul>
+                   @if (count($lists) > 1)
+                        <ul>
+                          @foreach ($lists as $list)
+                            <li>{{ $list }}</li>
+                          @endforeach
+                        </ul>
+                    @elseif (count($lists) == 1)
+                        <p>
+                            You have one list: {{ $lists[0]}}.
+                        </p>
+                    @else
+                        <p>You don't have any lists saved.</p>
+                   @endif
+               </ul>
             </div>
         </div>
     </body>
