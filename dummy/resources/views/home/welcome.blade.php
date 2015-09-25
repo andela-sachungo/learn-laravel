@@ -45,13 +45,14 @@
                @section('content')
 
                <h1>Welcome to TODOParrot</h1>
-
-               <p>
-                   ToDOParrot is the ultimate productivity application
-                   for tropical-minded users.
-               </p>
-
                @endsection
+
+               @section('advertisement')
+                   @parent
+                      <p>
+                          Buy the TODOParrot Productivity guide for $10!
+                      </p>
+                @endsection
             </div>
         </div>
     </body>
