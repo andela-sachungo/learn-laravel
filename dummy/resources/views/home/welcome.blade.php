@@ -39,23 +39,19 @@
     <body>
         <div class="container">
             <div class="content">
-               <!-- <div class="title">Laravel 5</div> -->
+               <!--<div class="title">Laravel 5</div> -->
+               @extends('layouts.master')
+
+               @section('content')
+
                <h1>Welcome to TODOParrot</h1>
-               <ul>
-                   @if (count($lists) > 1)
-                        <ul>
-                          @foreach ($lists as $list)
-                            <li>{{ $list }}</li>
-                          @endforeach
-                        </ul>
-                    @elseif (count($lists) == 1)
-                        <p>
-                            You have one list: {{ $lists[0]}}.
-                        </p>
-                    @else
-                        <p>You don't have any lists saved.</p>
-                   @endif
-               </ul>
+
+               <p>
+                   ToDOParrot is the ultimate productivity application
+                   for tropical-minded users.
+               </p>
+
+               @endsection
             </div>
         </div>
     </body>
